@@ -69,8 +69,8 @@ export const ListProducts: React.FC<ListProductsProps> = ({ countsById, onCountC
               max={10}
               defaultValue={0}
               size="small"
-              value={countsById[buy.id] ?? 0}                                                      // устанавливаем значение из countsById, если оно есть, иначе 0. Это значение пришло сверху из Buy.tsx и соответствует количеству товара с данным id в корзине
-              onValueChange={(value) => onCountChange(buy.id, Number(value ?? 0), buy.price, buy.title)}      // при изменении значения отправляем наверх id, новое количество, цену и название товара
+              value={countsById[buy.id] ?? 0}                                                                 // устанавливаем значение из countsById, если оно есть, иначе 0. Это значение пришло сверху из Buy.tsx и соответствует количеству товара с данным id в корзине
+              onValueChange={(value) => onCountChange(buy.id, Number(value ?? 0), buy.price, buy.title)}      // при изменении значения отправляем наверх id, новое количество, цену и название товара. 
             />
           </Box>
         </Stack>
